@@ -1,0 +1,7 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Redirecionar tudo que não seja a pasta public para public/
+RewriteCond %{REQUEST_URI} !^/Livro-Caixa/public/
+RewriteRule ^(.*)$ public/$1 [L]

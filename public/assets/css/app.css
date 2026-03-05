@@ -1,0 +1,171 @@
+/* ===========================
+   Livro Caixa - Estilos Custom
+   =========================== */
+
+:root {
+    --lc-gradient-start: #1a1a2e;
+    --lc-gradient-end:   #16213e;
+}
+
+/* Login page */
+.login-page {
+    background: linear-gradient(135deg, var(--lc-gradient-start), var(--lc-gradient-end));
+    min-height: 100vh;
+}
+
+.login-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Layout geral */
+body {
+    background-color: #f5f6fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1;
+}
+
+footer.footer {
+    margin-top: auto;
+}
+
+/* Navbar */
+.navbar-brand {
+    letter-spacing: 0.03em;
+}
+
+/* Mês nav */
+.month-nav .nav-pills {
+    gap: 4px;
+}
+
+.month-nav .nav-link {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* Cards de resumo */
+.summary-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Tabela */
+.table > :not(caption) > * > * {
+    padding: 0.85rem 0.75rem;
+}
+
+/* Badges sem texto escuro padrão */
+.badge {
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+/* Responsividade mobile */
+@media (max-width: 576px) {
+    .summary-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    .h5.fw-bold {
+        font-size: 1rem;
+    }
+}
+
+/* ── L) Dark mode ─────────────────────────────────────────────── */
+
+[data-bs-theme="dark"] body {
+    background-color: #121212;
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #1e1e2e;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .summary-icon {
+    filter: brightness(0.85);
+}
+
+[data-bs-theme="dark"] .month-nav .nav-link:not(.active) {
+    color: #adb5bd;
+}
+
+[data-bs-theme="dark"] .table {
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: rgba(255,255,255,0.03);
+    --bs-table-hover-bg: rgba(255,255,255,0.05);
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .table-light {
+    --bs-table-bg: rgba(255,255,255,0.05);
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: #9a9db0 !important;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #2a2a3e;
+    border-color: rgba(255,255,255,0.15);
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .modal-content {
+    background-color: #1e1e2e;
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .list-group-item {
+    background-color: transparent;
+    border-color: rgba(255,255,255,0.08);
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #2a2a3e;
+    border-color: rgba(255,255,255,0.12);
+}
+
+[data-bs-theme="dark"] .dropdown-item {
+    color: #dee2e6;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item.active {
+    background-color: rgba(255,255,255,0.1);
+}
+
+[data-bs-theme="dark"] footer.footer {
+    background-color: #0d0d1a !important;
+}
